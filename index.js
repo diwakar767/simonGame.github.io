@@ -23,6 +23,14 @@ $(document).keypress(function(event){
     }
 });
 
+$("body").click(function(){
+    if(started==0){
+        nextSequence();
+        started++;
+        $("h1").text("Level  "+level);
+    }
+});
+
 
 function nextSequence(){
 userClickedPattern=[];
