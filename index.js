@@ -11,7 +11,7 @@ var level=0;
 
 function startover(){
     level=0;
-    gamePattern.clear();
+    gamePattern=[];
     started=0;
 }
 
