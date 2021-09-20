@@ -3,7 +3,7 @@ var randomChosenColor;
 var gamePattern=[];
 var userClickedPattern=[];
 var buttonColors=["red", "blue", "green", "yellow" ];
-var started=0 ;
+var started=false ;
 var level=0;
   
 
@@ -12,21 +12,20 @@ var level=0;
 function startover(){
     level=0;
     gamePattern=[];
-    started=0;
+    started=false;
 }
 
 $(document).keypress(function(event){
-    if(started==0){
+    if(!started){
         nextSequence();
-        started++;
+        started=true;
         $("h1").text("Level  "+level);
     }
 });
-
-$("body").click(function(){
-    if(started==0){
+$("h1").click(function(event){
+    if(!started){
         nextSequence();
-        started++;
+        started=true;
         $("h1").text("Level  "+level);
     }
 });
